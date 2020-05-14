@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  project:
+    image: gradle:6.4.0-jdk8
+    command: bash
+    working_dir: /home/gradle/project
+    ports: [5005:5005]
+    volumes:
+      - type: bind
+        source: .
+        target: /home/gradle/project
+      - type: volume
+        source: cache
+        target: /home/gradle/.gradle
+volumes:
+  cache:
