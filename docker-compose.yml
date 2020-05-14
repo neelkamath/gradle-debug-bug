@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   project:
-    image: gradle:6.4.0-jdk8
+    image: gradle:6.4.0-jdk14
     command: bash
     working_dir: /home/gradle/project
     ports: [5005:5005]
